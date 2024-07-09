@@ -1,6 +1,6 @@
 const fs = require("fs")
 const path = require("path")
-const data = require("countries.json")
+const data = require("./countries.json")
 
 exports.handler = async (event, context) => {
   const headers = {
