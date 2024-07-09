@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "GET") {
     try {
-      const dataPath = path.resolve(__dirname, "countries.json")
+      const dataPath = path.resolve(__dirname, "functions/countries.json")
       console.log("Data Path:", dataPath) // Log the data path
 
       const data = JSON.parse(fs.readFileSync(dataPath, "utf8"))
