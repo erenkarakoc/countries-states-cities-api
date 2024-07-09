@@ -1,6 +1,6 @@
 [build]
   functions = "netlify/functions"
-  publish = "public"
+  publish = "src"
 
 [[redirects]]
   from = "/*"
