@@ -3,4 +3,4 @@
 
 [[redirects]]
   from = "/"
-  to = "/.netlify/functions/api
+  to = "/.netlify/functions/api"
