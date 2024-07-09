@@ -1,0 +1,10 @@
+<script>
+  fetch('https://countries-states-cities-api.netlify.app/.netlify/functions/api')
+    .then((response) => {
+      console.log(response)
+      response.json()
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+</script>
