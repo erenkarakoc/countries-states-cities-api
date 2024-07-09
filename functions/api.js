@@ -1,3 +1,6 @@
+const fs = require("fs")
+const path = require("path")
+
 exports.handler = async (event, context) => {
   const headers = {
     "Access-Control-Allow-Origin": "*",
@@ -14,7 +17,8 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "GET") {
     try {
-      const data = require("./countries.json")
+      const dataPath = path.resolve(__dirname, "countries.json")
+      const data = JSON.parse(fs.readFileSync(dataPath, "utf8"))
 
       return {
         statusCode: 200,
