@@ -1,21 +1,10 @@
 {
-  "dependencies": {
-    "express": "^4.19.2",
-    "netlify-cli": "^17.33.0",
-    "netlify-lambda": "^2.0.16"
-  },
-  "devDependencies": {
-    "netlify": "^13.1.20"
-  },
-  "name": "countries-states-cities-api",
-  "description": "��#\u0000 \u0000c\u0000o\u0000u\u0000n\u0000t\u0000r\u0000i\u0000e\u0000s\u0000-\u0000s\u0000t\u0000a\u0000t\u0000e\u0000s\u0000-\u0000c\u0000i\u0000t\u0000i\u0000e\u0000s\u0000-\u0000a\u0000p\u0000i\u0000\r\u0000 \u0000",
+  "name": "netlify-api",
   "version": "1.0.0",
-  "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "netlify-lambda build src"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
 }
