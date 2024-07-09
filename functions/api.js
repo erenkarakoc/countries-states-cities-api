@@ -17,8 +17,11 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "GET") {
     try {
-      const dataPath = require("./countries.json")
+      const dataPath = path.resolve(__dirname, "countries.json")
+      console.log("Data Path:", dataPath) // Log the data path
+
       const data = JSON.parse(fs.readFileSync(dataPath, "utf8"))
+      console.log("Data:", data)
 
       return {
         statusCode: 200,
@@ -26,6 +29,8 @@ exports.handler = async (event, context) => {
         body: JSON.stringify(data),
       }
     } catch (error) {
+      console.error("Error reading file:", error)
+
       return {
         statusCode: 500,
         headers,
