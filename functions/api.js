@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "GET") {
     try {
-      const dataPath = path.resolve(__dirname, "countries.json") // Adjust path as per Netlify environment
+      const dataPath = path.resolve(__dirname, "functions/countries.json") // Adjust path as per Netlify environment
 
       const data = JSON.parse(fs.readFileSync(dataPath, "utf8"))
 
