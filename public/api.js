@@ -3,11 +3,6 @@ exports.handler = async (event, context) => {
     try {
       const data = require("./countries.json")
 
-      const headers = {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-      }
-
       return {
         statusCode: 200,
         headers,
