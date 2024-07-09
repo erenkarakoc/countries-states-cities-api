@@ -1,4 +1,5 @@
 const fs = require("fs")
+const path = require("path")
 
 exports.handler = async (event, context) => {
   const headers = {
@@ -16,7 +17,8 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "GET") {
     try {
-      const dataPath = "./countries.json"
+      const dataPath = path.resolve(__dirname, "countries.json") // Adjust path as per Netlify environment
+
       const data = JSON.parse(fs.readFileSync(dataPath, "utf8"))
 
       return {
