@@ -18,7 +18,7 @@ exports.handler = async (event, context) => {
 
   if (event.httpMethod === "GET") {
     try {
-      const countryId = event.queryStringParameters.countryId
+      const countryId = Number(event.queryStringParameters.countryId)
       const countryToReturn = data.find(
         (country) => country["id"] === countryId
       )
