@@ -1,0 +1,10 @@
+{
+  "name": "netlify-api",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "netlify-lambda build src"
+  },
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
+}
